@@ -1,0 +1,307 @@
+/*
+    Стилі для SAMSUNG Experience Store Prototype
+    Цей файл містить усі стилі для index.html, smartphones.html,
+    smartwatches.html, earbuds.html та tablets.html.
+*/
+
+/* 1. БАЗОВІ СТИЛІ ТА СКИДАННЯ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* 2. СТИЛІ ХЕДЕРА ТА ФУТЕРА */
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cart-icon {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer h3 {
+    margin-bottom: 10px;
+}
+
+.phone-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff; /* Яскравий колір для телефону */
+}
+
+.phone-details {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.social-links span {
+    margin: 0 10px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* 3. СТИЛІ ГЕРОЙ-БАНЕРА (INDEX.HTML) */
+.hero {
+    background-color: #fff;
+    padding: 40px 0;
+    margin-bottom: 20px;
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 250px;
+    max-width: 50%;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.ai-badge {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.promo-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.new-price {
+    color: #e00000;
+    font-size: 2rem;
+}
+
+/* 4. СТИЛІ СЕКЦІЇ ПРО МАГАЗИН */
+.about {
+    background-color: #fff;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 200px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* 5. СТИЛІ КАТАЛОГІВ ТА ПРОДУКТІВ */
+.products {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Сетка для головної сторінки та сторінок-каталогів */
+.product-grid,
+.smartphone-grid {
+    display: grid;
+    /* 4 колонки для головної, 3 колонки для сторінок категорій */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    justify-content: center; /* Центрує елементи, якщо їх менше, ніж колонок */
+}
+
+/* На сторінках-каталогах фіксуємо 3 колонки, якщо це можливо */
+@media (min-width: 900px) {
+    .smartphone-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* СТИЛІ КАРТКИ ПРОДУКТУ */
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 250px; /* Для вирівнювання карток на index.html */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card h4 {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.product-card-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product-specs {
+    list-style: none;
+    text-align: left;
+    margin: 15px 0;
+    padding-left: 10px;
+    color: #555;
+}
+
+.product-specs li {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.product-price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.cta-button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* 6. СТИЛІ ГЕРОЙ-СЕКЦІЇ НА СТОРІНКАХ КАТАЛОГІВ */
+.page-hero {
+    background-color: #e6e6e6;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.page-hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* 7. ВИПРАВЛЕННЯ ДЛЯ ПОСИЛАНЬ (ЗАПИТ КОРИСТУВАЧА) */
+
+.product-card-link {
+    text-decoration: none; /* ВИДАЛЯЄ ПІДКРЕСЛЕННЯ */
+    color: inherit; /* ЗБЕРІГАЄ КОЛІР ВІД КАРТКИ (НЕ СИНІЙ) */
+}
+
+.product-card-link:hover {
+    color: #007bff; /* Опціональна зміна кольору при наведенні миші */
+}
