@@ -11,7 +11,7 @@ body {
 	margin: 0 auto;
 }
 
-.slides .slide{ /*все изображения справа друг от доруга*/
+.slides .slide{ 
 	width: 25%;
 	float: left;
 }
@@ -49,7 +49,7 @@ body {
 	display: block;
 }
 
-/*настройка переключения и положения для правой стрелки*/
+
 #switch1:checked ~ .arrows label:nth-child(2),
 #switch2:checked ~ .arrows label:nth-child(3),
 #switch3:checked ~ .arrows label:nth-child(4),
@@ -63,7 +63,7 @@ body {
 label, a{ 
 	cursor: pointer;
 }
-/*скрываетвсе radio-input*/
+
 input[type="radio"]{ 
 	display: none;
 }
@@ -146,7 +146,7 @@ input[type="radio"]{
 	}
 }
 
-/* 1. БАЗОВІ СТИЛІ ТА СКИДАННЯ */
+
 * {
     margin: 0;
     padding: 0;
@@ -167,7 +167,7 @@ body {
     padding: 10px 0;
 }
 
-/* 2. СТИЛІ ХЕДЕРА ТА ФУТЕРА */
+
 header {
     background-color: #1a1a1a;
     color: white;
@@ -204,7 +204,7 @@ footer h3 {
 .phone-number {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #007bff; /* Яскравий колір для телефону */
+    color: #007bff; 
 }
 
 .phone-details {
@@ -285,7 +285,7 @@ footer h3 {
     font-size: 2rem;
 }
 
-/* 4. СТИЛІ СЕКЦІЇ ПРО МАГАЗИН */
+
 .about {
     background-color: #fff;
     padding: 30px 0;
@@ -322,7 +322,7 @@ footer h3 {
     margin-bottom: 15px;
 }
 
-/* 5. СТИЛІ КАТАЛОГІВ ТА ПРОДУКТІВ */
+
 .products {
     padding: 20px 0;
     text-align: center;
@@ -333,17 +333,17 @@ footer h3 {
     margin-bottom: 30px;
 }
 
-/* Сетка для головної сторінки та сторінок-каталогів */
+
 .product-grid,
 .smartphone-grid {
     display: grid;
-    /* 4 колонки для головної, 3 колонки для сторінок категорій */
+    
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     gap: 20px;
-    justify-content: center; /* Центрує елементи, якщо їх менше, ніж колонок */
+    justify-content: center; 
 }
 
-/* На сторінках-каталогах фіксуємо 3 колонки, якщо це можливо */
+
 @media (min-width: 900px) {
     .smartphone-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -358,7 +358,7 @@ footer h3 {
     padding: 20px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
-    min-height: 250px; /* Для вирівнювання карток на index.html */
+    min-height: 250px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -437,13 +437,13 @@ footer h3 {
     color: #555;
 }
 
-/* 7. ВИПРАВЛЕННЯ ДЛЯ ПОСИЛАНЬ (ЗАПИТ КОРИСТУВАЧА) */
+
 
 .product-card-link {
-    text-decoration: none; /* ВИДАЛЯЄ ПІДКРЕСЛЕННЯ */
-    color: inherit; /* ЗБЕРІГАЄ КОЛІР ВІД КАРТКИ (НЕ СИНІЙ) */
+    text-decoration: none; 
+    color: inherit;
 }
 
 .product-card-link:hover {
-    color: #007bff; /* Опціональна зміна кольору при наведенні миші */
+    color: #007bff; 
 }
